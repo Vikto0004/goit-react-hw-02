@@ -5,15 +5,13 @@ export default function Feedback({
   state: { good, neutral, bad },
   positiveFeedback,
 }) {
-  if (totalFeedback) {
-    return (
-      <ul className={css.list}>
-        <li>Good: {good}</li>
-        <li>Neutral: {neutral}</li>
-        <li>Bad: {bad}</li>
-        <li>Total: {totalFeedback}</li>
-        <li>Positive: {positiveFeedback}%</li>
-      </ul>
-    );
-  }
+  return (
+    <ul className={css.list}>
+      <li>Good: {good}</li>
+      <li>Neutral: {neutral}</li>
+      <li>Bad: {bad}</li>
+      <li>Total: {totalFeedback}</li>
+      <li>Positive: {positiveFeedback}%</li>
+    </ul>
+  );
 }

@@ -42,12 +42,15 @@ export default function App() {
     <>
       <Description />
       <Options updateFeedback={updateFeedback} totalFeedback={totalFeedback} />
-      {!totalFeedback && <Notification />}
-      <Feedback
-        state={state}
-        totalFeedback={totalFeedback}
-        positiveFeedback={positiveFeedback}
-      />
+      {totalFeedback > 0 ? (
+        <Feedback
+          state={state}
+          totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
+        />
+      ) : (
+        <Notification />
+      )}
     </>
   );
 }
